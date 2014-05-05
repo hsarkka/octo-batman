@@ -10,6 +10,7 @@ Requirements
 * Express
 * Bower
 * Gulp
+* Compass
 
 Quick start:
 
@@ -18,6 +19,9 @@ Quick start:
 	npm install
 
 	bower install
+	
+	gem update --system
+	gem install compass
 	
 	gulp
 
