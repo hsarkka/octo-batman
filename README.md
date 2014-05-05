@@ -6,15 +6,21 @@ Some front-end technology prototyping
 Requirements
 ------------
 
+* Node.js
+* Express
 * Bower
 * Gulp
 
 Quick start:
 
-	npm install -g bower gulp gulp-concat gulp-uglify
-
-	npm install gulp gulp-concat gulp-uglify --save-dev
+	npm install -g express bower gulp gulp-concat gulp-uglify gulp-minify-css
 	
+	npm install
+
+	bower install
+	
+	gulp
+
 	gulp watch
 	
 	node app
