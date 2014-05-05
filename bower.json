@@ -1,0 +1,22 @@
+{
+  "name": "octo-batman",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hsarkka/octo-batman",
+  "authors": [
+    "Heikki Sarkka <heikki@iki.fi>"
+  ],
+  "description": "Some front-end prototyping",
+  "main": "test.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  }
+}
