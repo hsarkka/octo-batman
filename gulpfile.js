@@ -13,13 +13,10 @@ var paths = {
 		root: 'src/sass',
         files: ['src/sass/*.scss']
     },
-    css: {
-        files: ['src/css/*.css'],
-        root: 'src/css'
-    },
     js: {
     	files: [
-    		'bower_components/jquery/dist/jquery.js'
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/modernizr/modernizr.js'            
     	]
     },
     dest: './public/'
@@ -34,15 +31,17 @@ gulp.task('compass', function() {
         .pipe(compass({
             css: paths.dest + 'temp',
             sass: paths.sass.root,
-            image: paths.dest + 'images'
+            image: paths.dest + 'images',
+            import_path: "bower_components/foundation/scss"
         }))
+        .pipe(concat('site.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest(paths.dest + 'css'));
 });
 
 gulp.task('js', function() {
     return gulp.src(paths.js.files)
-        .pipe(concat('site.js'))
+        .pipe(concat('site.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.dest + 'js'));
 });
@@ -58,5 +57,5 @@ gulp.task('default', ['compass', 'js'], function(){ });
 //
 
 gulp.task('watch', function () {
-  gulp.watch(['src/sass/*'], ['compass']);
+  gulp.watch(paths.sass.files, ['compass']);
 });
