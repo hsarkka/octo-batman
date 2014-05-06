@@ -16,7 +16,9 @@ var paths = {
     js: {
     	files: [
             'bower_components/jquery/dist/jquery.js',
-            'bower_components/modernizr/modernizr.js'            
+            'bower_components/modernizr/modernizr.js',
+            'bower_components/foundation/js/foundation/foundation.js',
+            'bower_components/foundation/js/foundation/foundation.topbar.js'
     	]
     },
     dest: './public/'
